@@ -18,10 +18,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               withMaven(maven : 'Apache Maven 3.3.3'){
-                        sh "mvn deploy"
-                        sh "cp target/*.war /home/midt/opt/tomcat8.5"
-                }
+              
+                    sh "cp target/*.war /home/midt/opt/tomcat8.5"
+                
 
             }
         }
